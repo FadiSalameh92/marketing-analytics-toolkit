@@ -1,0 +1,57 @@
+# Generated data and outputs — regenerated locally by each module
+*/data/
+*/output/
+*.csv
+*.png
+!**/docs/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# PyMC / arviz cache (large MCMC artifacts)
+*.nc
+*.netcdf
+.pytensor/
+
+# OS
+.DS_Store
+Thumbs.db
