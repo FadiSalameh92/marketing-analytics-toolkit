@@ -8,10 +8,10 @@ Built originally across the marketing analytics function of a multi-channel cons
 
 | # | Module | Method | Status |
 |---|---|---|---|
-| 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines | ✅ Available |
-| 2 | Bayesian Marketing Mix Model | PyMC-based MMM with channel adstock and saturation curves | 🚧 Planned |
-| 3 | Lead Scoring with XGBoost | Gradient-boosted classifier on demographic, behavioral, and prior-interaction features | 🚧 Planned |
-| 4 | Price Elasticity & Demand Curves | Log-log regression with elasticity estimation on SKU-level transaction data | 🚧 Planned |
+| 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines | 
+| 2 | [Bayesian Marketing Mix Model](02_bayesian_mmm/) | PyMC-based MMM with channel adstock and saturation curves | 
+| 3 | [Lead Scoring with XGBoost](03_lead_scoring/) | Gradient-boosted classifier on demographic, behavioral, and prior-interaction features | 
+| 4 | Price Elasticity & Demand Curves | Log-log regression with elasticity estimation on SKU-level transaction data | 
 
 ## What these methods answer together
 
@@ -26,7 +26,7 @@ Modules 1 and 2 are complementary: Markov attributes credit across channels, whi
 
 ## Sample outputs
 
-![Attribution comparison across methods](docs/attribution_comparison.png)
+![Attribution comparison across methods](01_markov_attribution/docs/attribution_comparison.png)
 *Markov attribution vs four heuristic baselines. Last-touch attribution indicates call_center drives 52% of conversions and TV drives 6%. Markov shows the real distribution is much more balanced (24.5% vs 16.9%) once channel interdependencies are accounted for.*
 
 ![Channel transition matrix](docs/transition_matrix.png)
