@@ -42,7 +42,7 @@ cd marketing-analytics-toolkit
 # Install all dependencies
 pip install -r requirements.txt
 
-# Run any individual module — each is self-contained
+# Run any individual, self-contained module
 cd 01_markov_attribution
 python generate_synthetic_data.py
 python run_analysis.py
@@ -75,7 +75,7 @@ marketing-analytics-toolkit/
 - **statsmodels** Regression and Statistical Methods
 - **PyMC** Bayesian Inference (Module 2)
 - **XGBoost** Gradient Boosting (Module 3)
-- **matplotlib** — Visualization
+- **matplotlib** Visualization
 
 ## License
 
