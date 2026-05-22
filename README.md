@@ -6,12 +6,12 @@ Built originally across the marketing analytics function of a multi-channel cons
 
 ## Modules
 
-| # | Module | Method 
+| # | Module | Method | Status
 |---|---|---|---|
-| 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines
-| 2 | [Bayesian Marketing Mix Model](02_bayesian_mmm/) | PyMC-based MMM with channel adstock and saturation curves
-| 3 | [Lead Scoring with XGBoost](03_lead_scoring/) | Gradient-boosted classifier on demographic, behavioral, and prior-interaction features
-| 4 | [Price Elasticity & Demand Curves](04_price_elasticity/) | Log-log regression with elasticity estimation on SKU-level transaction data 
+| 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines | Live
+| 2 | [Bayesian Marketing Mix Model](02_bayesian_mmm/) | PyMC-based MMM with channel adstock and saturation curves | Live
+| 3 | [Lead Scoring with XGBoost](03_lead_scoring/) | Gradient-boosted classifier on demographic, behavioral, and prior-interaction features | Live
+| 4 | [Price Elasticity & Demand Curves](04_price_elasticity/) | Log-log regression with elasticity estimation on SKU-level transaction data | Live
 
 ## What these methods answer together
 
