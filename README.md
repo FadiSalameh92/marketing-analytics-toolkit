@@ -32,6 +32,12 @@ Modules 1 and 2 are complementary: Markov attributes credit across channels, whi
 ![Sales decomposition over time](02_bayesian_mmm/docs/sales_decomposition.png)
 *Stacked decomposition of weekly sales: base demand (gray), plus the contribution of each channel after adstock and saturation effects. The observed sales line (dashed black) closely tracks the model's predicted total, thus confirming the fit.*
 
+![Lift curve — model-ranked calling vs random](03_lead_scoring/docs/lift_curve.png)
+*If the call-center can handle the top 20% of inbound leads (1,000 of 5,000 in the test set), ranking by XGBoost score captures **56% of all conversions**, a **2.8x lift** vs calling leads in a random order. At the top 10%, the lift rises to **3.8x**.*
+
+![Demand curves](04_price_elasticity/docs/demand_curves.png)
+*Fitted demand curves for entry and premium SKUs across all three brands. The dense cluster of points at regular price plus the spread during promotional weeks is what drives identification. An SKU whose price never moves can't have its elasticity estimated.*
+
 ## Setup
 
 ```bash
