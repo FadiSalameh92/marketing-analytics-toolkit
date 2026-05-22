@@ -29,8 +29,8 @@ Modules 1 and 2 are complementary: Markov attributes credit across channels, whi
 ![Attribution comparison across methods](01_markov_attribution/docs/attribution_comparison.png)
 *Markov attribution vs four heuristic baselines. Last-touch attribution indicates call_center drives 52% of conversions and TV drives 6%. Markov shows the real distribution is much more balanced (24.5% vs 16.9%) once channel interdependencies are accounted for.*
 
-![Channel transition matrix](01_markov_attribution/docs/transition_matrix.png)
-*Channel-to-channel transition probabilities surface the funnel structure: paid_search → call_center is the strongest transition path, while TV transitions broadly to all channels (consistent with its awareness-channel role).*
+![Sales decomposition over time](02_bayesian_mmm/docs/sales_decomposition.png)
+*Stacked decomposition of weekly sales: base demand (gray), plus the contribution of each channel after adstock and saturation effects. The observed sales line (dashed black) closely tracks the model's predicted total, thus confirming the fit.*
 
 ## Setup
 
