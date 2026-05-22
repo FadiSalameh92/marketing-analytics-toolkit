@@ -1,0 +1,86 @@
+# Marketing Analytics Toolkit
+
+A portfolio of four production-grade marketing analytics methods, each implemented as a standalone module with synthetic data, methodology documentation, and reproducible outputs.
+
+Built originally across the marketing analytics function of a multi-channel consumer healthcare retail business. This portfolio version uses synthetic data — the methodology and code structure mirror the production deployments.
+
+## Modules
+
+| # | Module | Method | Status |
+|---|---|---|---|
+| 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines | ✅ Available |
+| 2 | [Bayesian Marketing Mix Model](02_bayesian_mmm/) | PyMC-based MMM with adstock (geometric) and Hill saturation per channel; posterior inference via NUTS | ✅ Available |
+| 3 | [Lead Scoring with XGBoost](03_lead_scoring/) | Gradient-boosted classifier for call-center lead prioritization, with capacity-constrained operational analysis and logistic baseline comparison | ✅ Available |
+| 4 | [Price Elasticity & Demand Curves](04_price_elasticity/) | Log-log OLS elasticity estimation per SKU, within-brand cross-price elasticity matrices, and revenue-optimal pricing direction | ✅ Available |
+
+## What these methods answer together
+
+Each module solves a different question in the marketing function:
+
+- **Attribution** — When a customer converts, which channels caused it? *Module 1: Markov*
+- **Spend efficiency** — How much extra revenue does each additional dollar in each channel produce? *Module 2: Bayesian MMM*
+- **Lead prioritization** — Which inbound leads are most likely to convert, and how should we route them? *Module 3: XGBoost*
+- **Pricing** — How sensitive is demand to price changes by SKU, and where can margin be expanded? *Module 4: Elasticity*
+
+Modules 1 and 2 are complementary: Markov attributes credit across channels, while MMM quantifies the diminishing return on spend within each channel. In production, both feed into the same budget allocation decision.
+
+## Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/FadiSalameh92/marketing-analytics-toolkit.git
+cd marketing-analytics-toolkit
+
+# Install all dependencies
+pip install -r requirements.txt
+
+# Run any individual module — each is self-contained
+cd 01_markov_attribution
+python generate_synthetic_data.py
+python run_analysis.py
+```
+
+Each module has its own README with setup instructions, methodology notes, and sample outputs.
+
+## Project structure
+
+```
+marketing-analytics-toolkit/
+├── README.md                       # This file
+├── requirements.txt                # Combined dependencies for all modules
+├── .gitignore
+├── 01_markov_attribution/          # ✅ Multi-touch attribution
+│   ├── README.md
+│   ├── generate_synthetic_data.py
+│   ├── markov_attribution.py
+│   └── run_analysis.py
+├── 02_bayesian_mmm/                # ✅ Bayesian MMM (PyMC)
+│   ├── README.md
+│   ├── generate_synthetic_data.py
+│   ├── mmm_model.py
+│   └── run_analysis.py
+├── 03_lead_scoring/                # ✅ XGBoost lead scoring
+│   ├── README.md
+│   ├── generate_synthetic_data.py
+│   ├── lead_scoring_model.py
+│   └── run_analysis.py
+└── 04_price_elasticity/            # ✅ Price elasticity & demand curves
+    ├── README.md
+    ├── generate_synthetic_data.py
+    ├── elasticity_model.py
+    └── run_analysis.py
+```
+
+## Stack
+
+- **Python 3.10+**
+- **pandas, numpy** — data manipulation
+- **scikit-learn** — classical ML and preprocessing
+- **statsmodels** — regression and statistical methods
+- **PyMC** — Bayesian inference (Module 2)
+- **XGBoost** — gradient boosting (Module 3)
+- **matplotlib** — visualization
+
+## License
+
+MIT
