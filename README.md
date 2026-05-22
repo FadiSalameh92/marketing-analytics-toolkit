@@ -6,7 +6,7 @@ Built originally across the marketing analytics function of a multi-channel cons
 
 ## Modules
 
-| # | Module | Method | Status |
+| # | Module | Method |
 |---|---|---|---|
 | 1 | [Markov Chain Attribution](01_markov_attribution/) | First-order Markov chain with removal-effect attribution; comparison against four heuristic baselines | 
 | 2 | [Bayesian Marketing Mix Model](02_bayesian_mmm/) | PyMC-based MMM with channel adstock and saturation curves | 
